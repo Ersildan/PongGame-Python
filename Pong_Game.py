@@ -13,6 +13,15 @@ def animate_ball():
         ball_speed_x *= -1
 
 
+def animate_player():
+    player.y += player_speed
+
+    if player.top <= 0:
+        player.top = 0
+    if player.bottom >= screen_hight:
+        player.bottom = screen_hight
+
+
 pygame.init()
 
 screen_width = 1000
@@ -53,7 +62,7 @@ while True:
 
     # Change the position of the game objects
     animate_ball()
-    player.y += player_speed
+    animate_player()
 
     # Draw the game object Игровой объект
     screen.fill('black')
