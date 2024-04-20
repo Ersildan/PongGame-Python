@@ -74,3 +74,5 @@ while True:
     # Update the display обновление экрана
     pygame.display.update()
     clock.tick(60)
+
+# score player
