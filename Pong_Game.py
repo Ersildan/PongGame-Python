@@ -43,6 +43,7 @@ player.midright = (screen_width, screen_hight/2)
 ball_speed_x = 6
 ball_speed_y = 6
 player_speed = 0
+cpu_speed = 6
 
 while True:
     for event in pygame.event.get():
@@ -63,7 +64,7 @@ while True:
     # Change the position of the game objects
     animate_ball()
     animate_player()
-
+    cpu.y += cpu_speed
     # Draw the game object Игровой объект
     screen.fill('black')
     pygame.draw.aaline(screen, 'white', (screen_width/2, 0), (screen_width/2, screen_hight))
@@ -74,5 +75,3 @@ while True:
     # Update the display обновление экрана
     pygame.display.update()
     clock.tick(60)
-
-# score player
