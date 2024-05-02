@@ -105,7 +105,7 @@ while True:
             if event.key == pygame.K_DOWN:
                 player_speed = 0
 
-    # Change the position of the game objects
+    # Change the position of the game objects Изменение позиций объектов в игре
     animate_ball()
     animate_player()
     animate_cpu()
